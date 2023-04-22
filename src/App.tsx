@@ -1,26 +1,19 @@
 import {
   Routes,
   Route,
-  Link
-} from 'react-router-dom';
-import Home from './pages/home/Home';
-import './App.sass';
+} from 'react-router-dom'
+import Home from './pages/home/Home'
+import Navigation from './ui-kit/navigation/Navigation'
 
 export default function App() {
   return <>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-      </ul>
-    </nav>
+    <Navigation />
 
     <Routes>
       <Route
-        path="/"
+        path='/'
         element={<Home/>}
       />
     </Routes>
-  </>;
+  </>
 }

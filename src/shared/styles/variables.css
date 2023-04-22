@@ -1,0 +1,11 @@
+:root {
+  /* Colors */
+  --background-dark: #0a1112;
+  --background-dark-text: #fff;
+  --background-light: #f1f1f1;
+  --background-light-text: #0a1112;
+
+  /* Spacings */
+  --global-padding: 16px;
+
+}
