@@ -100,11 +100,11 @@ export default function Works() {
     const tempIdx = index + 1
 
     if (tempIdx % 3 === 0) {
-      acc[2].push(image)
+      acc[0].push(image)
     } else if (tempIdx % 2 === 0) {
       acc[1].push(image)
     } else {
-      acc[0].push(image)
+      acc[2].push(image)
     }
 
     return acc;
