@@ -1,2 +1,51 @@
 .Button
+  position: relative
+  padding: 16px 52px
+  background-color: var(--primary)
+  color: #fff
+  font-size: 26px
+  font-family: RubikSemiBold
+  border-radius: 4px
+  cursor: pointer
+  border: none
+  outline: none
+
+  &::after,
+  &::before
+    content: ''
+    display: block
+    width: 36px
+    height: 36px
+    position: absolute
+    
+    border: 8px solid #fff
+    
+    transition: all .2s ease-in-out
+
+  &::before
+    left: -12px
+    top: -12px
+    border-right-color: transparent
+    border-bottom-color: transparent
+
+  &::after
+    right: -12px
+    bottom: -12px
+    border-left-color: transparent
+    border-top-color: transparent
   
+  &:hover
+    &::before,
+    &::after
+      width: 48px
+      height: 48px
+      border-width: 10px
+
+    &::before
+      left: -24px
+      top: -24px
+
+    &::after
+      right: -24px
+      bottom: -24px
+      

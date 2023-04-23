@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '../../ui-kit/button/Button'
 import Container from '../../ui-kit/container/Container'
+import './Home.sass'
 
 export default function Home() {
   return <Container>
@@ -10,7 +11,7 @@ export default function Home() {
       <div className='Home__Third'>3</div>
       <div className='Home__Button_Wrapper'>
         <Link to='/works'>
-          <Button>Explore works...</Button>
+          <Button>Explore more works</Button>
         </Link>
       </div>
     </div>
