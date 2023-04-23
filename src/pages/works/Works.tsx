@@ -112,7 +112,6 @@ export default function Works() {
 
   return <Container wide>
     <div className="Works">
-      {/* {shuffledImages.map(image => <img key={image.src} src={image.src} />)} */}
       <div className="Works__First">
         {arrayToReder[0].map((image: any) => <img key={image.src} className='Works__Image' src={image.src} />)}
       </div>
