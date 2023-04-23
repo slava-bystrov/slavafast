@@ -21,6 +21,10 @@ a {
   transition: var(--transition);
 }
 
+p {
+  margin: 0 0 20px;
+}
+
 @media (min-width: 768px) {
   * {
     font-size: 20px;

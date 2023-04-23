@@ -2,6 +2,7 @@ import { Link, matchRoutes, useLocation } from 'react-router-dom'
 import classNames from 'classnames'
 import { AppRoutesConfig } from '../../constants/routes'
 import Container from '../container/Container'
+import Socials from '../socials/Socials'
 import instagram from '../../assets/img/instagram.svg'
 import './Navigation.sass'
 
@@ -28,18 +29,9 @@ export default function Navigation() {
             </li>
           </Link>)}
       </ul>
-      <a
-        className='Navigation__List-Item Navigation__Instagram'
-        href='https://www.instagram.com/_slava_fast/'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <img
-          className='Navigation__Instagram-Icon'
-          src={instagram} alt='Instagram Logo'
-        />
-        Instagram
-      </a>
+      <div className='Navigation__Socials'>
+        <Socials />
+      </div>
     </nav>
   </Container>
 }

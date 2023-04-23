@@ -4,11 +4,14 @@ import './Blog.sass'
 export default function Blog() {
   return <Container>
     <div className="Blog">
-      Blog Page is under construction
+      <p>This Page is under construction :)</p>
+      <p>And here is an article about photography from wiki :D</p>
+      <p>
+      Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film. It is employed in many fields of science, manufacturing (e.g., photolithography), and business, as well as its more direct uses for art, film and video production, recreational purposes, hobby, and mass communication.[1]
+      </p>
+      
+    
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quasi illo voluptatem dolorum laborum est, quis ad explicabo minus. Maxime nulla tempore minus cum eaque expedita id beatae, facilis eos.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, numquam?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio sunt, delectus nisi recusandae sed minima tempore illum reprehenderit similique in soluta nemo minus atque sapiente maxime impedit aspernatur libero perferendis, aperiam unde ipsam quos vel temporibus veritatis. Porro, sint expedita.</p>
     </div>
   </Container>
 }

@@ -1,0 +1,16 @@
+.About
+  --photo-size: 200px
+
+  display: flex
+
+  &_Left
+    width: var(--photo-size)
+    min-width: var(--photo-size)
+    margin-right: 16px
+
+    @media (min-width: 768px)
+      --photo-size: 400px
+      margin-right: 32px
+
+  &__Socials
+    transform: translateX(-16px)

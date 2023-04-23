@@ -2,6 +2,7 @@
   display: flex
   flex-direction: column
   padding-top: 6px
+  margin-bottom: var(--page-top-space)
 
   @media (min-width: 768px)
     display: flex
@@ -47,23 +48,11 @@
       &_Active
         cursor: default
 
-  &__Instagram
+  &__Socials
     position: absolute
     right: var(--global-padding)
     top: 16px
-    display: flex
-    color: #fff
-    margin: 0
 
     @media (min-width: 768px)
       position: static
-
-    &-Icon
-      color: #fff
-      width: 20px
-      height: 20px
-      margin-right: 8px
-
-      @media (min-width: 768px)
-        transform: translateY(3px)
 
