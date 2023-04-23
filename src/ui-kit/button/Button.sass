@@ -1,3 +1,11 @@
+:root
+  --elements-margin: -14px
+  --elements-margin-hover: -28px
+  --elements-width: 32px
+  --elements-width-hover: 52px
+  --elements-border-width: 8px
+  --elements-border-width-hover: 12px
+
 .Button
   position: relative
   padding: 16px 52px
@@ -5,47 +13,47 @@
   color: #fff
   font-size: 26px
   font-family: RubikSemiBold
-  border-radius: 4px
   cursor: pointer
   border: none
   outline: none
+  transition: var(--transition)
 
   &::after,
   &::before
     content: ''
     display: block
-    width: 36px
-    height: 36px
+    width: var(--elements-width)
+    height: var(--elements-width)
     position: absolute
-    
-    border: 8px solid #fff
-    
-    transition: all .2s ease-in-out
+    border: var(--elements-border-width) solid #fff
+    transition: var(--transition)
 
   &::before
-    left: -12px
-    top: -12px
+    left: var(--elements-margin)
+    top: var(--elements-margin)
     border-right-color: transparent
     border-bottom-color: transparent
 
   &::after
-    right: -12px
-    bottom: -12px
+    right: var(--elements-margin)
+    bottom: var(--elements-margin)
     border-left-color: transparent
     border-top-color: transparent
   
   &:hover
+    background-color: var(--primary-dark)
+
     &::before,
     &::after
-      width: 48px
-      height: 48px
-      border-width: 10px
+      width: var(--elements-width-hover)
+      height: var(--elements-width-hover)
+      border-width: var(--elements-border-width-hover)
 
     &::before
-      left: -24px
-      top: -24px
+      left: var(--elements-margin-hover)
+      top: var(--elements-margin-hover)
 
     &::after
-      right: -24px
-      bottom: -24px
+      right: var(--elements-margin-hover)
+      bottom: var(--elements-margin-hover)
       
