@@ -1,5 +1,10 @@
 .Container
   padding: 0 var(--global-padding)
-
+  max-width: var(--container-width)
+  margin: 0 auto
+  
   @media (min-width: 1024px)
-    padding: 0 100px
+      padding: 0 var(--container-wide-padding)
+
+  &_Wide
+    max-width: none

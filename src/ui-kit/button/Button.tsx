@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 import './Button.sass'
 
-interface Button {
+interface ButtonProps {
   children: ReactNode
 }
 
-export default function Button({ children }: Button) {
+export default function Button({ children }: ButtonProps) {
   return <button className='Button'>{children}</button>
 }

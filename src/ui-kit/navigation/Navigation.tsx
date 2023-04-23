@@ -1,34 +1,32 @@
-import { Link } from 'react-router-dom'
-import './Navigation.sass'
+import { Link, matchRoutes, useLocation } from 'react-router-dom'
+import classNames from 'classnames'
+import { AppRoutesConfig } from '../../constants/routes'
 import Container from '../container/Container'
 import instagram from '../../assets/img/instagram.svg'
-import logo from '../../assets/img/logo.png'
+import './Navigation.sass'
 
 export default function Navigation() {
-  return <Container>
+  const location = useLocation()
+  const currentRoute = matchRoutes(Object.values(AppRoutesConfig), location)
+  const currentRouteBase = currentRoute?.length && currentRoute[0].pathnameBase;
+
+  return <Container wide>
     <nav className='Navigation'>
-      <Link to='/'>
+      <Link to={AppRoutesConfig.Home.path}>
         <div className="Navigation__Logo-Text">
             Slava 
             <span className="Navigation__Logo-Text_Highlight">Fast</span>
         </div>
       </Link>
       <ul className='Navigation__List'>
-        <Link to='/'>
-          <li className='Navigation__List-Item'>
-            Works
-          </li>
-        </Link>
-        <Link to='/'>
-          <li className='Navigation__List-Item'>
-            Blog
-          </li>
-        </Link>
-        <Link to='/'>
-          <li className='Navigation__List-Item'>
-            About & Contacts
-          </li>
-        </Link>
+        {[AppRoutesConfig.Works, AppRoutesConfig.Blog, AppRoutesConfig.About].map(routeConfig => <Link
+            to={routeConfig.path}
+            key={routeConfig.path}
+          >
+            <li className={classNames({ 'Navigation__List-Item': true, 'Navigation__List-Item_Active': currentRouteBase === routeConfig.path })}>
+              {routeConfig.title}
+            </li>
+          </Link>)}
       </ul>
       <a
         className='Navigation__List-Item Navigation__Instagram'

@@ -23,7 +23,7 @@
     &_Highlight
       font-size: inherit
       margin-left: 8px
-      color: #b75dff
+      color: var(--primary-light)
       font-family: MainFontBold
 
   &__List
@@ -37,11 +37,15 @@
       border-bottom: 5px solid transparent
       transition: var(--transition)
 
-      &:hover
+      &:hover,
+      &_Active
         border-bottom-color: var(--primary)
 
       @media (min-width: 768px)
         margin: 0 16px
+
+      &_Active
+        cursor: default
 
   &__Instagram
     position: absolute
