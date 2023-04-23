@@ -1,4 +1,9 @@
 .Works
+  --image-gap: 16px
+
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  gap: 16px
+  gap: var(--image-gap)
+
+  &__Image
+    margin-bottom: var(--image-gap)

@@ -96,10 +96,32 @@ const images = [
 
 export default function Works() {
   const shuffledImages = images.sort((a, b) => 0.5 - Math.random());
+  const arrayToReder = shuffledImages.reduce((acc, image, index) => {
+    const tempIdx = index + 1
+
+    if (tempIdx % 3 === 0) {
+      acc[2].push(image)
+    } else if (tempIdx % 2 === 0) {
+      acc[1].push(image)
+    } else {
+      acc[0].push(image)
+    }
+
+    return acc;
+  }, { 0: [] as any, 1: [] as any, 2: [] as any})
 
   return <Container wide>
     <div className="Works">
-      {shuffledImages.map(image => <img key={image.src} src={image.src} />)}
+      {/* {shuffledImages.map(image => <img key={image.src} src={image.src} />)} */}
+      <div className="Works__First">
+        {arrayToReder[0].map((image: any) => <img key={image.src} className='Works__Image' src={image.src} />)}
+      </div>
+      <div className="Works__Second">
+        {arrayToReder[1].map((image: any) => <img key={image.src} className='Works__Image' src={image.src} />)}
+      </div>
+      <div className="Works__Third">
+        {arrayToReder[2].map((image: any) => <img key={image.src} className='Works__Image' src={image.src} />)}
+      </div>
     </div>
   </Container>
 }
