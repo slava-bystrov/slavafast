@@ -1,13 +1,36 @@
 .Navigation
-  padding: 0 var(--global-padding)
   display: flex
   justify-content: space-between
-  align-items: center
+  align-items: baseline
+
+  &__Logo
+    color: #fff
+    font-size: 32px
+    font-weight: bold
 
   &__List
     display: flex
     list-style: none
+    padding: 0
 
     &-Item
-      margin: 0 20px
+      margin: 0 12px
+      color: #fff
+      border-bottom: 5px solid transparent
+      transition: var(--transition)
+
+      &:hover
+        border-bottom-color: var(--primary)
+
+  &__Instagram
+    display: flex
+    color: #fff
+    margin: 0
+
+    &-Icon
+      color: #fff
+      width: 20px
+      height: 20px
+      margin-right: 8px
+      transform: translateY(3px)
 

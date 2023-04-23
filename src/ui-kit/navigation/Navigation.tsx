@@ -1,32 +1,49 @@
 import { Link } from 'react-router-dom'
 import './Navigation.sass'
 import Container from '../container/Container'
+import instagram from '../../assets/img/instagram.svg'
 
 export default function Navigation() {
   return <Container>
     <nav className='Navigation'>
-      <div className="Navigation__Logo">
-        <Link to='/'>
-          Slava Fast
-        </Link>
-      </div>
+      <Link to='/'>
+        <div className="Navigation__Logo">
+            Slava Fast
+        </div>
+      </Link>
       <ul className='Navigation__List'>
-        <li className='Navigation__List-Item'>
-          <Link to='/'>Home</Link>
-        </li>
-        <li className='Navigation__List-Item'>
-          <Link to='/'>Works</Link>
-        </li>
-        <li className='Navigation__List-Item'>
-          <Link to='/'>Blog</Link>
-        </li>
-        <li className='Navigation__List-Item'>
-          <Link to='/'>About & Contacts</Link>
-        </li>
+        <Link to='/'>
+          <li className='Navigation__List-Item'>
+            Home
+          </li>
+        </Link>
+        <Link to='/'>
+          <li className='Navigation__List-Item'>
+            Works
+          </li>
+        </Link>
+        <Link to='/'>
+          <li className='Navigation__List-Item'>
+            Blog
+          </li>
+        </Link>
+        <Link to='/'>
+          <li className='Navigation__List-Item'>
+            About & Contacts
+          </li>
+        </Link>
       </ul>
-      <div className="Navigation__Instagram">
-        <a href='https://www.instagram.com/_slava_fast/'>Instagram</a>
-      </div>
+      <a
+        className='Navigation__List-Item Navigation__Instagram'
+        href='https://www.instagram.com/_slava_fast/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <img
+        className='Navigation__Instagram-Icon'
+        src={instagram} alt='Instagram Logo' />
+        Instagram
+      </a>
     </nav>
   </Container>
 }

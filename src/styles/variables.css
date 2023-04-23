@@ -5,13 +5,12 @@
   --background-light: #f1f1f1;
   --background-light-text: #0a1112;
 
-  --primary: #5d0d9d;
-  --primary-dark: #4c0784;
+  --primary: #6e00c6;
+  --primary-dark: #5900a2;
 
   /* Spacings */
   --global-padding: 16px;
 
   /* Others */
   --transition: all .15s ease-in-out;
-
 }

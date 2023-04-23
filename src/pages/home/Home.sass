@@ -1,23 +1,27 @@
 .Home
-  display: flex
+  display: grid
+  grid-template-areas: 'first first second' 'first first third' 'button button button'
   gap: 20px
-  flex-wrap: wrap
-  justify-content: space-between
-  padding: 100px 0 300px
+  padding-bottom: 200px
 
-  &__Left
-    width: 64%
+  &__Image
+    width: 100%
+    height: 100%
+    object-fit: cover
 
-  &__Right
-    width: 34%
+    &_first
+      grid-area: first
 
-    display: flex
-    gap: 28px
-    flex-direction: column
+    &_second
+      grid-area: second
+
+    &_third
+      grid-area: third
 
   &__Button
     &_Wrapper
+      margin-top: 52px
       width: 100%
-      margin-top: 100px
       display: flex
       justify-content: center
+      grid-area: button

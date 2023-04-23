@@ -9,13 +9,10 @@ import './Home.sass'
 export default function Home() {
   return <Container>
     <div className='Home'>
-      <div className="Home__Left">
-        <img src={firstImage} alt="" />
-      </div>
-      <div className="Home__Right">
-        <img src={thirdImage} alt="" /> 
-        <img src={secondImage} alt="" />
-      </div>
+      <img src={firstImage} className='Home__Image Home__Image_first' alt="" />
+      <img src={thirdImage} className='Home__Image Home__Image_second' alt="" /> 
+      <img src={secondImage} className='Home__Image Home__Image_third' alt="" />
+
       <div className='Home__Button_Wrapper'>
         <Link to='/works'>
           <Button>Explore more works</Button>
