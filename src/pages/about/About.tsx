@@ -1,6 +1,6 @@
 import Container from '../../ui-kit/container/Container'
 import Socials from '../../ui-kit/socials/Socials'
-import slavaFastPhoto from '../../assets/img/slava_fast_photo.jpg'
+import slavaFastPhoto from '../../assets/img/slava_3.jpg'
 import { ComponentSize } from '../../constants/component-size'
 import './About.sass'
 

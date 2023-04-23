@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { AppRoutesConfig } from '../../constants/routes'
 import Button from '../../ui-kit/button/Button'
 import Container from '../../ui-kit/container/Container'
-import firstImage from '../../assets/img/ava_garda.jpg'
-import secondImage from '../../assets/img/saxer.jpg'
-import thirdImage from '../../assets/img/girl_pink.jpg'
+import firstImage from '../../assets/img/slava_1.jpg'
+import secondImage from '../../assets/img/works/1.jpg'
+import thirdImage from '../../assets/img/works/2.jpg'
 import './Home.sass'
 
 export default function Home() {
