@@ -1,6 +1,6 @@
 * {
-  font-family: RubikLight;
-  font-size: 20px;
+  font-family: MainFont;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -19,4 +19,10 @@ a {
   text-decoration: none;
   color: #fff;
   transition: var(--transition);
+}
+
+@media (min-width: 768px) {
+  * {
+    font-size: 20px;
+  }
 }

@@ -2,21 +2,18 @@ import { Link } from 'react-router-dom'
 import './Navigation.sass'
 import Container from '../container/Container'
 import instagram from '../../assets/img/instagram.svg'
+import logo from '../../assets/img/logo.png'
 
 export default function Navigation() {
   return <Container>
     <nav className='Navigation'>
       <Link to='/'>
-        <div className="Navigation__Logo">
-            Slava Fast
+        <div className="Navigation__Logo-Text">
+            Slava 
+            <span className="Navigation__Logo-Text_Highlight">Fast</span>
         </div>
       </Link>
       <ul className='Navigation__List'>
-        <Link to='/'>
-          <li className='Navigation__List-Item'>
-            Home
-          </li>
-        </Link>
         <Link to='/'>
           <li className='Navigation__List-Item'>
             Works
@@ -40,8 +37,9 @@ export default function Navigation() {
         rel='noopener noreferrer'
       >
         <img
-        className='Navigation__Instagram-Icon'
-        src={instagram} alt='Instagram Logo' />
+          className='Navigation__Instagram-Icon'
+          src={instagram} alt='Instagram Logo'
+        />
         Instagram
       </a>
     </nav>
