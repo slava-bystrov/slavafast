@@ -18,6 +18,9 @@ export default function Navigation() {
           <Link to='/'>Works</Link>
         </li>
         <li className='Navigation__List-Item'>
+          <Link to='/'>Blog</Link>
+        </li>
+        <li className='Navigation__List-Item'>
           <Link to='/'>About & Contacts</Link>
         </li>
       </ul>
