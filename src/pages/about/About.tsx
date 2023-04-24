@@ -7,10 +7,10 @@ import './About.sass'
 export default function About() {
   return <Container>
     <div className="About">
-      <div className="About_Left">
+      <div className="About__Left">
         <img src={slavaFastPhoto} alt='Slava Fast photo' />
       </div>
-      <div className="About_Right">
+      <div className="About__Right">
         <p>
           Aloha and welcome to my, hopefully cozy, website 🖤
         </p>

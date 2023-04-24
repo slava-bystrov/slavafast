@@ -1,16 +1,23 @@
 .About
   --photo-size: 200px
 
-  display: flex
+  @media (min-width: 768px)
+    --photo-size: 400px
+    display: flex
 
-  &_Left
+  &__Left
+    float: right
+    padding: 0 0 12px 12px
     width: var(--photo-size)
     min-width: var(--photo-size)
-    margin-right: 16px
 
     @media (min-width: 768px)
-      --photo-size: 400px
+      float: none
+      padding: 0
       margin-right: 32px
+
+  &__Right
+    word-break: break-word
 
   &__Socials
     transform: translateX(-16px)
