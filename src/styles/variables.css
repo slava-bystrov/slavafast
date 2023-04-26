@@ -1,16 +1,19 @@
 :root {
   /* Colors */
-  --background-dark: #171820;
-  --background-dark-text: #fff;
-  --background-light: #f1f1f1;
-  --background-light-text: #0a1112;
+  --background: #171820;
+  --text: #fff;
+  --text-light: #9699a8;
 
   --primary: #6e00c6;
   --primary-dark: #5900a2;
   --primary-light: #b75dff;
 
+  --sasha-gray: #676a77;
+  --green: #006a29;
+  --teal: #008293;
   --lucy-color: #fa7000;
   --slava-color: #ff254d;
+
 
   /* Spacings */
   --global-padding: 16px;

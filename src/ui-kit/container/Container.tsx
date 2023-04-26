@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import './Container.sass'
 
 interface ContainerProps {
-  children: ReactNode;
-  wide?: boolean;
+  children: ReactNode
+  wide?: boolean
 }
 
 export default function Container({ children, wide }: ContainerProps) {

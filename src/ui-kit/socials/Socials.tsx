@@ -1,5 +1,3 @@
-import youtube from '../../assets/img/youtube.svg'
-import facebook from '../../assets/img/facebook.svg'
 import { ComponentSize } from '../../constants/component-size'
 import classNames from 'classnames'
 import './Socials.sass'

@@ -5,7 +5,6 @@ import {
 import { AppRoutesConfig } from './constants/routes'
 import Navigation from './ui-kit/navigation/Navigation'
 
-
 export default function App() {
   return <>
     <Navigation />
