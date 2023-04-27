@@ -1,23 +1,25 @@
+import { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../../../ui-kit/button/Button'
 import { ComponentSize } from '../../../constants/component-size'
 import Tag from '../../../ui-kit/tag/Tag'
 import { TagColor } from '../../../ui-kit/tag/types'
-import { Post, BlogTag } from '../types'
+import { Post, PostTag } from '../types'
 import './Blog-Post-Preview.sass'
-import { ReactNode } from 'react'
 
 interface BlogPostPreviewProps {
   post: Post
 }
 
 const tagsOptionsByType = {
-  [BlogTag.Coding]: { title: 'Coding', color: TagColor.Orange },
-  [BlogTag.Photography]: { title: 'Photography', color: TagColor.Violet },
-  [BlogTag.Lifestyle]: { title: 'Lifestyle', color: TagColor.Green },
+  [PostTag.Coding]: { title: 'Coding', color: TagColor.Orange },
+  [PostTag.Photography]: { title: 'Photography', color: TagColor.Violet },
+  [PostTag.Lifestyle]: { title: 'Lifestyle', color: TagColor.Green },
 }
 
 export default function BlogPostPreview(
   { post: {
+    id,
     title,
     shortDescription, 
     publicationDate,
@@ -30,12 +32,14 @@ export default function BlogPostPreview(
     <h3 className="BlogPostPreview__Title">{ title }</h3>
     <p className="BlogPostPreview__Description">{ shortDescription }</p>
     <div className="BlogPostPreview__Button">
-      <Button size={ComponentSize.S}> Read more </Button>
+      <Link to={`${id}`}>
+        <Button size={ComponentSize.S}> Read more </Button>
+      </Link>
     </div>
   </div>
 }
 
-function renderTags(tags: BlogTag[]): ReactNode {
+function renderTags(tags: PostTag[]): ReactNode {
   return <div className='BlogPostPreview__Tags'>
     {tags.map(tag => <div className="BlogPostPreview__Tag" key={tag}>
       <Tag
