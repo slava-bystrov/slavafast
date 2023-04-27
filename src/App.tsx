@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, ReactNode } from "react"
 import {
   Routes,
   Route,
@@ -7,7 +7,7 @@ import {
 import { AppRoutesConfig } from './constants/routes'
 import Navigation from './ui-kit/navigation/Navigation'
 
-function ScrollToTop({ children }: any) {
+function ScrollToTop({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   
   useEffect(() => {
