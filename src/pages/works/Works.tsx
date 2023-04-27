@@ -1,4 +1,5 @@
 import Container from '../../ui-kit/container/Container'
+import Button from '../../ui-kit/button/Button'
 import './Works.sass'
 import i_1 from '../../assets/img/works/1.jpg'
 import i_2 from '../../assets/img/works/2.jpg'
@@ -121,6 +122,16 @@ export default function Works() {
       <div className="Works__Third">
         {arrayToReder[2].map((image: any) => <img key={image.src} className='Works__Image' src={image.src} />)}
       </div>
+    </div>
+    <div className='Works__Button'>
+      <a
+        className='Socials__Link'
+        href='https://www.instagram.com/_slava_fast/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Button>Even more on Instagram</Button>
+      </a>
     </div>
   </Container>
 }
