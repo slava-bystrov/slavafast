@@ -1,21 +1,7 @@
-import { useEffect } from "react"
-import {
-  Routes,
-  Route,
-  useLocation
-} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { AppRoutesConfig } from './constants/routes'
 import Navigation from './ui-kit/navigation/Navigation'
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  
-  useEffect(() => {
-      window.scrollTo(0, 0);
-  }, [pathname]);
-  
-  return null;
-}
+import ScrollToTop from './ui-kit/scroll-to-top/ScrollToTop'
 
 export default function App() {
   return <>
@@ -28,6 +14,7 @@ export default function App() {
           path={routeConfig.path}
           element={routeConfig.element}
         />)}
+        <Route path='*' element={AppRoutesConfig.Home.element}/>
       </Routes>
   </>
 }

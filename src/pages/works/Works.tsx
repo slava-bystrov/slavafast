@@ -46,6 +46,16 @@ import i_42 from '../../assets/img/works/42.jpg'
 import i_43 from '../../assets/img/works/43.jpg'
 import i_44 from '../../assets/img/works/44.jpg'
 import i_45 from '../../assets/img/works/45.jpg'
+import i_46 from '../../assets/img/works/46.jpg'
+import i_47 from '../../assets/img/works/47.jpg'
+import i_48 from '../../assets/img/works/48.jpg'
+import i_49 from '../../assets/img/works/49.jpg'
+import i_50 from '../../assets/img/works/50.jpg'
+import i_51 from '../../assets/img/works/51.jpg'
+import i_52 from '../../assets/img/works/52.jpg'
+import i_53 from '../../assets/img/works/53.jpg'
+import i_54 from '../../assets/img/works/54.jpg'
+import i_55 from '../../assets/img/works/55.jpg'
 
 const images = [
   { src: i_1 },
@@ -93,6 +103,16 @@ const images = [
   { src: i_43 },
   { src: i_44 },
   { src: i_45 },
+  { src: i_46 },
+  { src: i_47 },
+  { src: i_48 },
+  { src: i_49 },
+  { src: i_50 },
+  { src: i_51 },
+  { src: i_52 },
+  { src: i_53 },
+  { src: i_54 },
+  { src: i_55 },
 ]
 
 export default function Works() {
