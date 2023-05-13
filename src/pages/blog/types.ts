@@ -15,20 +15,27 @@ export enum PostTag {
   Lifestyle = 'lifestyle'
 }
 
-export type PostContent = ContentTextType | ContentImageType
+export type PostContent = ContentText | ContentImage | ContentList
 
 export enum ContentType {
   Paragraph = 'paragraph',
-  Image = 'image'
+  Image = 'image',
+  List = 'list'
 }
 
-interface ContentTextType {
+interface ContentText {
   type: ContentType.Paragraph
   value: string
 }
 
-interface ContentImageType {
+interface ContentImage {
   type: ContentType.Image
   src: string
   alt: string
+}
+
+interface ContentList {
+  type: ContentType.List
+  title: string
+  items: string[]
 }

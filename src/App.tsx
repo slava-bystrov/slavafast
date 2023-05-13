@@ -7,7 +7,6 @@ export default function App() {
   return <>
     <ScrollToTop />
       <Navigation />
-
       <Routes>
         {Object.values(AppRoutesConfig).map(routeConfig => <Route
           key={routeConfig.path}

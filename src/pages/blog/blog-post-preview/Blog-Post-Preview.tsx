@@ -11,11 +11,13 @@ interface BlogPostPreviewProps {
   post: Post
 }
 
-const tagsOptionsByType = {
+interface TagOption { title: string; color: TagColor; }
+
+const tagsOptionsByType: Record<PostTag, TagOption> = {
   [PostTag.Coding]: { title: 'Coding', color: TagColor.Orange },
   [PostTag.Photography]: { title: 'Photography', color: TagColor.Violet },
   [PostTag.Lifestyle]: { title: 'Lifestyle', color: TagColor.Green },
-}
+} as const
 
 export default function BlogPostPreview(
   { post: {

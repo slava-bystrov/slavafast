@@ -1,5 +1,5 @@
 import Container from '../../ui-kit/container/Container'
-import blogPosts from './posts'
+import blogPosts from './posts/posts'
 import BlogPostPreview from './blog-post-preview/Blog-Post-Preview'
 import './Blog.sass'
 

@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { AppRoutesConfig } from '../../../constants/routes'
 import Container from '../../../ui-kit/container/Container'
-import blogPosts from '../posts'
+import blogPosts from '../posts/posts'
 import { ContentType, PostContent } from '../types'
 import './Blog-Post-Page.sass'
 
@@ -21,9 +21,7 @@ export default function BlogPostPage() {
   function renderContent(content: PostContent, idx: number) {
     switch (content.type) {
       case ContentType.Paragraph:
-        return <p key={idx}>
-          { content.value }
-        </p>
+        return <p key={idx}>{ content.value }</p>
 
       case ContentType.Image:
         return <div
@@ -34,6 +32,14 @@ export default function BlogPostPage() {
             src={content.src}
             alt={content.alt}
           />
+        </div>
+
+      case ContentType.List:
+        return <div>
+          {content.title ? <p className='BlogPostPage__List-Title'>{ content.title }</p> : null}
+          {content.items.length ? <ul className='BlogPostPage__List'>
+            {content.items.map(item => <li key='item' className='BlogPostPage__List-Item'>{ item }</li>)}
+          </ul> : null}
         </div>
     }
   }
